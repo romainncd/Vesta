@@ -1,5 +1,5 @@
 /* Police d'écriture */
-@import url(@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 *{
@@ -9,7 +9,7 @@
     font-style: normal;
     font-family: "DM Sans", sans-serif;
 }
-/*  */
+/* Header */
 
 body {
     padding: 0;
@@ -28,6 +28,7 @@ header {
 header img {
     width:60px;
  }
+
 /* Menu de Navigation */
 nav.top-menu {
     display: flex;
@@ -42,11 +43,11 @@ nav {
     align-items: center;
 
 }
-li {
+header nav li {
     display: inline-flex;
     margin: 0 auto;
 }
-a {
+nav a {
     display: block;
     padding: 10px 20px;
     color: white;
@@ -82,7 +83,7 @@ li i {
     align-items: center;
     margin-left: 0 auto;
 }
-.input-search{;
+.input-search{
     display: block;
     height: 25px;
     width: 200px;
@@ -93,5 +94,27 @@ li i {
     float: left;
 }
 
-li i{
+/* Milieu-Page */
+.filtre{
+    background-color: white;
+    display: flex;
+}
+.filtre{
+    display:flex;
+    list-style: none;
+}
+
+.menu-milieu-normal{
+    background-color: #2d3b87;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-inline: 15px;
+}
+
+.menu-milieu-normal:hover{
+    background-color: #051285;
+    transition-duration: 0.15s;
 }
