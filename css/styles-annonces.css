@@ -1,0 +1,97 @@
+/* Police d'écriture */
+@import url(@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 320;
+    font-style: normal;
+    font-family: "DM Sans", sans-serif;
+}
+/*  */
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+section.top-page {
+    padding: 25px;
+}
+header {
+    display: flex;
+    align-items: center;
+}    
+header img {
+    width:60px;
+ }
+/* Menu de Navigation */
+nav.top-menu {
+    display: flex;
+    margin-left: 0px;
+    width: 100%;
+    list-style: none;
+}
+nav {
+    align-items: center;
+    background-color: #2d3b87;
+    border-radius: 10px;
+    align-items: center;
+
+}
+li {
+    display: inline-flex;
+    margin: 0 auto;
+}
+a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: 5px;
+}
+.normal:hover {
+    background-color: #051285;
+    transition-duration: 0.15s;
+    border-radius: 5px;
+}
+.active {
+    display: block;
+    background-color: #051285;
+    border-radius: 5px;
+}
+.acc-btn {
+    display: block;
+    margin-left: 0px;
+    padding: 0px 0x;
+}
+.acc-btn:hover{
+    background-color: #2d3b87;
+}
+li i {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Barre de Recherche */
+.search-box{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 0 auto;
+}
+.input-search{;
+    display: block;
+    height: 25px;
+    width: 200px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.search-box i {
+    float: left;
+}
+
+li i{
+}
