@@ -29,10 +29,28 @@ header img {
     width:60px;
  }
 
+/* Hamburger Menu */
+.ham-menu{
+    display: flex;
+}
+.ham-btn{
+    background-color: #2d3b87;
+    border-radius: 5px;
+    border: none;
+    margin-right: 15px;
+}
+div button i{
+    color: white;
+    display: block;
+    padding: 5px;
+}
+.ham-btn:hover{
+    background-color: #051285;
+}
+
 /* Menu de Navigation */
 nav.top-menu {
     display: flex;
-    margin-left: 0px;
     width: 100%;
     list-style: none;
 }
@@ -78,11 +96,12 @@ li i {
 
 /* Barre de Recherche */
 .search-box{
+    background-color: green;
     margin-top: 20px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin-left: 0 auto;
 }
+
 .input-search{
     display: block;
     height: 25px;
@@ -91,22 +110,24 @@ li i {
     border-radius: 5px;
 }
 .search-box i {
+    display: block;
     float: left;
+
 }
 
 /* Milieu-Page */
 .filtre{
+    margin-top: 30px;
     background-color: white;
     display: flex;
-}
-.filtre{
-    display:flex;
     list-style: none;
 }
 
+.filtre li{
+    margin: 0 auto;
+}
 .menu-milieu-normal{
     background-color: #2d3b87;
-    display: block;
     text-decoration: none;
     color: white;
     padding: 10px 20px;
