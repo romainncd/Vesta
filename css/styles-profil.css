@@ -166,8 +166,8 @@ nav.top-menu li i {
 
 .profile-container {
   position: relative;
-  width: 100px; /* Taille du conteneur */
-  height: 100px; /* Taille du conteneur */
+  width: 400px; /* Taille du conteneur */
+  height: 400px; /* Taille du conteneur */
   border-radius: 50%; /* Rend le conteneur circulaire */
   border: 3px solid #2d3b87; /* Bordure de couleur */
   display: flex;
@@ -243,3 +243,4 @@ nav.top-menu li i {
   left: 50%;
   transform: translateX(-50%);
 }
+

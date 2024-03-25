@@ -248,3 +248,6 @@ nav.top-menu li i {
     background-color: #051285;
     transition-duration: 0.15s;
 }
+.filtre i{
+    margin-right: 10px;
+}
