@@ -152,31 +152,33 @@ nav.top-menu li i {
     margin-right: 10px;
     margin-left: 10px;
 }
-
-
-/* Votre CSS existant pour le style de base */
-
+/* Profil */
+.profil{
+  display: flex;
+}
 /* Icone modifiable */
 .profile-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px; /* Espacement par rapport à la barre de navigation */
   position: relative; /* Positionnement relatif pour les éléments absolus */
+  width: 501px;
 }
 
 .profile-container {
-  position: relative;
+  position: relative; /* Utiliser position relative au lieu de absolute */
   width: 400px; /* Taille du conteneur */
   height: 400px; /* Taille du conteneur */
   border-radius: 50%; /* Rend le conteneur circulaire */
   border: 3px solid #2d3b87; /* Bordure de couleur */
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   transition: background-color 0.3s ease;
   cursor: pointer;
   overflow: hidden; /* Cache tout contenu dépassant du cercle */
+  margin-right: 20px; /* Espacement à droite */
 }
 
 .profile-icon,
@@ -244,3 +246,40 @@ nav.top-menu li i {
   transform: translateX(-50%);
 }
 
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 440px); /* Calcul de la largeur en fonction de l'espace restant */
+}
+
+.profile-info-box {
+  background-color: #f2f5f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-info i{
+  color: #2d3b87;
+  margin-right: 10px;
+}
+.profile-info-box h3 {
+  color: #2d3b87;
+  margin-bottom: 10px;
+}
+
+.profile-info-box p {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.profile-info-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-info-box ul li {
+  color: #555;
+  margin-bottom: 5px;
+}

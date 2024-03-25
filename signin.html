@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'inscription</title>
+  <link rel="stylesheet" href="css\signin.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h2>Inscription</h2>
+    <form class="form" onsubmit="return validateForm()">
+      <div class="input-container">
+        <input type="text" placeholder="Nom d'utilisateur" required>
+      </div>
+      <div class="input-container">
+        <input type="email" placeholder="Adresse e-mail" required>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" placeholder="Mot de passe" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$" title="Le mot de passe doit contenir au moins une majuscule, un caractère spécial, un chiffre et avoir au moins 8 caractères." required>
+        <span class="password-toggle" onclick="togglePasswordVisibility()">
+          <i class="fas fa-eye" id="eyeIcon"></i>
+        </span>
+      </div>
+      <div class="input-container" id="password-error" style="display:none; color:red;">
+        Le mot de passe doit contenir au moins une majuscule, un caractère spécial, un chiffre et avoir au moins 8 caractères.
+      </div>
+      <div class="input-container">
+        <input type="password" placeholder="Confirmer le mot de passe" required>
+      </div>
+      <div>
+      <a href="index.html"><button type="submit" >S'inscrire</button></a>
+      </form>
+    <p>Déjà membre ? <a href="login.html">Se connecter</a></p>
+  </div>
+  <script src="Java\signin.js"></script>
+</body>
+</html>
