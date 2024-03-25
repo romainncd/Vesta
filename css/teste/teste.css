@@ -1,69 +1,58 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile-section {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-top: 20px;
-}
-
-.profile-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ddd;
-    margin-right: 20px;
-}
-
-.profile-info h2 {
-    margin: 0;
-}
-
-.rating, .strong-point {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.strong-point span {
-    color: #000;
-    font-weight: bold;
-}
-
-.latest-service {
-    margin-left: auto;
-    text-align: right;
-}
-
-.service-requests, .service-rendered {
-    width: 100%;
     background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.service-requests h3, .service-rendered h3 {
-    margin-top: 0;
+h1 {
+    color: #333;
+    text-align: center;
 }
 
-
-
-button:hover {
-    background-color: #4a8cc7;
-
+.formulaire {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
+
+.formulaire input, .formulaire select, .formulaire button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulaire button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.formulaire button:hover {
+    background-color: #0056b3;
+}
+
+.emploi-du-temps .jour {
+    margin-bottom: 20px;
+}
+
+.emploi-du-temps .cours {
+    background-color: #009578;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
