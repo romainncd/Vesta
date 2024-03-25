@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.rating, .strong-point {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.strong-point span {
+    color: #000;
+    font-weight: bold;
+}
+
+.latest-service {
+    margin-left: auto;
+    text-align: right;
+}
+
+.service-requests, .service-rendered {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-requests h3, .service-rendered h3 {
+    margin-top: 0;
+}
+
+
+
+button:hover {
+    background-color: #4a8cc7;
+
+}

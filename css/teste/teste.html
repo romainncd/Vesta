@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Exchange Dashboard</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-circle" id="profilePicture"></div>
+            <div class="profile-info">
+              <input type="file" id="profileInput" style="display: none;" />
+              <button onclick="document.getElementById('profileInput').click()">Changer photo</button>
+                <h2>Jcromag</h2>
+                <p class="rating">4.9/5 · 582 services rendus · 22 services demandés</p>
+                <p class="strong-point">Point fort: <span>La proactivité</span></p>
+            </div>
+            <div class="latest-service">
+                <h3>Dernier service rendu:</h3>
+                <p>Déménagement · Ginette</p>
+            </div>
+        </div>
+
+        <div class="service-requests">
+            <h3>Service demander</h3>
+            <div class="announcement">Annonce</div>
+            <div class="announcement">Annonce</div>
+            <div class="announcement">Annonce</div>
+        </div>
+
+        <div class="service-rendered">
+            <h3>Services rendus</h3>
+            <div class="announcement">Annonce</div>
+            <div class="announcement">Annonce</div>
+            <div class="announcement">Annonce</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
