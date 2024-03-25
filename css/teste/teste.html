@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Emploi du Temps Élégant</title>
+    
+    <link rel="stylesheet" href="teste.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Mon Emploi du Temps</h1>
+        <div class="formulaire">
+            <input type="text" id="coursNom" placeholder="Nom du cours">
+            <input type="time" id="heureDebut">
+            <input type="time" id="heureFin">
+            <select id="jourSelect">
+                <option value="lundi">Lundi</option>
+                <option value="mardi">Mardi</option>
+                <option value="mercredi">Mercredi</option>
+                <option value="jeudi">Jeudi</option>
+                <option value="vendredi">Vendredi</option>
+            </select>
+            <button onclick="ajouterCours()">Ajouter</button>
+        </div>
+        <div id="emploiDuTemps" class="emploi-du-temps"></div>
+    </div>
+    <script src="teste.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,123 @@
+/* Styles pour les annonces */
+.annonces-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.annonce {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.annonce:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.annonce img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Couleurs d'état */
+.vignette {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.annonce.repondu .vignette {
+    background-color: #4caf50;
+}
+
+.annonce.offres .vignette {
+    background-color: #2196f3;
+}
+
+.annonce.sans-reponse .vignette {
+    background-color: #f44336;
+}
+
+.annonce-info {
+    flex: 1;
+}
+
+.titre {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00796b; /* Couleur verte */
+}
+
+#creer-annonce {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1976d2; /* Couleur bleue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#creer-annonce:hover {
+    background-color: #1565c0; /* Couleur bleue foncée au survol */
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#image-preview {
+    margin-top: 10px;
+    max-width: 100%;
+}
