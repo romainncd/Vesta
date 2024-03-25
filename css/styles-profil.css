@@ -154,41 +154,92 @@ nav.top-menu li i {
 }
 
 
-.profile-frame {
-    width: 250px; /* Largeur fixe */
-    height: 250px; /* Hauteur fixe */
-    border-radius: 50%; /* Pour arrondir les bords */
-    border: 5px solid #007bff; /* Bordure bleue */
-    overflow: hidden;
-    position: absolute; /* Position absolue pour le placer au milieu à gauche */
-    top: 50%; /* Déplace le haut de l'élément au milieu vertical */
-    left: 20px; /* Déplace l'élément 20px à partir de la gauche */
-    transform: translateY(-50%);
+/* Votre CSS existant pour le style de base */
+
+/* Icone modifiable */
+.profile-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espacement par rapport à la barre de navigation */
+  position: relative; /* Positionnement relatif pour les éléments absolus */
 }
 
-.profile-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Pour que l'image remplisse le conteneur sans déformation */
-    border-radius: 50%;  /* Pour s'assurer que l'image reste ronde */
-    
-}
-.button-container {
-    position: absolute; /* Position absolue pour placer le bouton */
-    top: calc(50% + 125px); /* Calculer la position verticale en dessous de l'image */
-    left: 20px; /* Déplace l'élément 20px à partir de la gauche */
-    transform: translate(-50%, -50%); 
-}
-
-
-#uploadButton {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.profile-container {
+  position: relative;
+  width: 100px; /* Taille du conteneur */
+  height: 100px; /* Taille du conteneur */
+  border-radius: 50%; /* Rend le conteneur circulaire */
+  border: 3px solid #2d3b87; /* Bordure de couleur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* Cache tout contenu dépassant du cercle */
 }
 
-#uploadButton:hover {
-    background-color: #0056b3; /* Changement de couleur au survol */
+.profile-icon,
+.edit-icon {
+  font-size: 48px; /* Taille des icônes */
+  color: #2d3b87; /* Couleur des icônes */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Assure que les icônes sont au premier plan */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initialement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Cache l'overlay par défaut */
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%; /* Assure que l'overlay est également circulaire */
+}
+
+.edit-icon {
+  display: none; /* Cache l'icône du crayon par défaut */
+}
+
+.profile-container:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Assombrit le fond au survol */
+  opacity: 1;
+}
+
+.profile-container:hover .overlay .edit-icon {
+  display: block; /* Affiche l'icône du crayon au survol */
+}
+
+.profile-container:hover .profile-icon {
+  display: none; /* Cache l'icône utilisateur au survol */
+}
+
+.profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse le conteneur */
+}
+.profile-container:hover .overlay .edit-icon {
+  display: block; /* Affiche l'icône du crayon au survol */
+}
+
+.profile-container:hover .profile-icon {
+  display: none; /* Cache l'icône utilisateur au survol */
+}
+.bottom {
+  position: absolute;
+  bottom: -15px; /* Ajustez cette valeur selon vos besoins */
+  left: 50%;
+  transform: translateX(-50%);
 }
