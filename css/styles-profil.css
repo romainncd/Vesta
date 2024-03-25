@@ -1,0 +1,194 @@
+/* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 320;
+    font-style: normal;
+    font-family: "DM Sans", sans-serif;
+}
+
+html {
+    background-color: #e8e9eb;
+}
+
+/* Header */
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.top-page {
+    padding: 25px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+header img {
+    width: 60px;
+}
+/* ham */
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 25.5px;
+    left: 35px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #2d3b87;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #051285;
+  }
+
+/* Navigation Menu */
+nav.top-menu {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    background-color: #2d3b87;
+    border-radius: 10px;
+    align-items: center;
+}
+
+nav.top-menu li {
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+nav.top-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav.top-menu li:hover {
+    background-color: #051285;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav.top-menu .active {
+    background-color: #051285;
+    border-radius: 5px;
+}
+
+nav.top-menu li i {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.profile-frame {
+    width: 250px; /* Largeur fixe */
+    height: 250px; /* Hauteur fixe */
+    border-radius: 50%; /* Pour arrondir les bords */
+    border: 5px solid #007bff; /* Bordure bleue */
+    overflow: hidden;
+    position: absolute; /* Position absolue pour le placer au milieu à gauche */
+    top: 50%; /* Déplace le haut de l'élément au milieu vertical */
+    left: 20px; /* Déplace l'élément 20px à partir de la gauche */
+    transform: translateY(-50%);
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Pour que l'image remplisse le conteneur sans déformation */
+    border-radius: 50%;  /* Pour s'assurer que l'image reste ronde */
+    
+}
+.button-container {
+    position: absolute; /* Position absolue pour placer le bouton */
+    top: calc(50% + 125px); /* Calculer la position verticale en dessous de l'image */
+    left: 20px; /* Déplace l'élément 20px à partir de la gauche */
+    transform: translate(-50%, -50%); 
+}
+
+
+#uploadButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#uploadButton:hover {
+    background-color: #0056b3; /* Changement de couleur au survol */
+}
