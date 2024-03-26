@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    background-color: #1976d2;
+    background-color: #2d3b87;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -25,7 +25,7 @@ body {
 
 #creer-annonce {
     padding: 10px 20px;
-    background-color: #2196f3;
+    background-color: #2d3b87;
     border: none;
     color: #fff;
     border-radius: 5px;
@@ -34,7 +34,7 @@ body {
 }
 
 #creer-annonce:hover {
-    background-color: #1976d2;
+    background-color: #2d3b87;
 }
 
 .annonces-container {
@@ -120,7 +120,7 @@ body {
 
 .popup-content form button[type="submit"] {
     padding: 10px 20px;
-    background-color: #2196f3;
+    background-color: #2d3b87;
     border: none;
     color: #fff;
     border-radius: 5px;
@@ -129,7 +129,7 @@ body {
 }
 
 .popup-content form button[type="submit"]:hover {
-    background-color: #1976d2;
+    background-color: #2d3b87;
 }
 
 #image-preview {
@@ -164,7 +164,7 @@ body {
 }
 
 .vignette.bleue {
-    background-color: #2196f3; /* Bleu */
+    background-color: #2d3b87; /* Bleu */
 }
 
 .vignette.rouge {
@@ -179,7 +179,7 @@ input[type="file"] {
 .custom-file-input {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #2196f3;
+    background-color: #2d3b87;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -187,7 +187,7 @@ input[type="file"] {
 }
 
 .custom-file-input:hover {
-    background-color: #1976d2;
+    background-color: #2d3b87;
 }
 
 .custom-file-input::before {

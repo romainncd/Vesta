@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script src="https://kit.fontawesome.com/62196ace0f.js" crossorigin="anonymous">
-    </script>
-    <script src="jav.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles-portefeuille.css" >
-    <title>VESTA</title>
+    <title>Portefeuille - VESTA</title>
+    <link rel="stylesheet" href="css\styles-portefeuille.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 </head>
 <body>
-    <section class="top-page">
-        <header>
-            <div class="ham-menu">
-                <button class="ham-btn"><i class="fa-solid fa-bars fa-2x"></i></button>
-            </div>
-            <nav class="top-menu">
-                <li class="normal"><a href="index.html" ><i class="fa-solid fa-house"></i>Accueil</a></li>
-                <li class="normal"><a href="annonces.html"><i class="fa-solid fa-bullhorn"></i>Mes Annonces</a></li>
-                <li class="normal"><a href="annonces.html" ><i class="fa-solid fa-calendar-days"></i>Mon Planning</a></li>
-                <li class="normal"><a href="#" class="active"><i class="fa-solid fa-wallet"></i>Mon PorteFeuille</a></li>
-                <li><a href="#" class="acc-btn"><i class="fa-solid fa-user"></a></i></li>
-                
-            </nav>
-        </header>
-    </section>
+    <header>
+        <div class="header-container">
+            <h1>Portefeuille</h1>
+            <a href="#" class="account-link"><i class="fas fa-user"></i> Mon Compte</a>
+        </div>
+    </header>
+    <main>
+        <section id="balance">
+            <h2>Solde</h2>
+            <div id="current-balance">$500.00</div>
+            <button id="edit-bank-info-btn">Modifier les informations bancaires</button>
+        </section>
+        <section id="bank-info-form" style="display: none;">
+            <h2>Modifier les informations bancaires</h2>
+            <!-- Formulaire de modification des informations bancaires -->
+            <!-- Vous pouvez le concevoir selon vos besoins -->
+            <form id="bank-info-form">
+                <!-- Champs de formulaire pour les informations bancaires -->
+            </form>
+        </section>
+        <section id="transaction-history">
+            <h2>Historique des transactions</h2>
+            <ul id="transactions-list">
+                <li class="transaction received">
+                    <span class="transaction-type">Reçu</span>
+                    <span class="transaction-amount">+$100.00</span>
+                    <span class="transaction-details">Vente de service X</span>
+                </li>
+                <li class="transaction spent">
+                    <span class="transaction-type">Dépensé</span>
+                    <span class="transaction-amount">-$50.00</span>
+                    <span class="transaction-details">Achat de service Y</span>
+                </li>
+                <!-- Plus d'éléments de transaction peuvent être ajoutés dynamiquement ici -->
+            </ul>
+        </section>
+        <section id="activity-summary">
+            <h2>Résumé des activités récentes</h2>
+            <p>Vous avez reçu un nouveau message de votre acheteur. <a href="#">Voir le message</a></p>
+            <!-- Vous pouvez ajouter d'autres éléments de résumé d'activité ici -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>Vous avez besoin d'aide ? Contactez-nous à support@vesta.com</p>
+            <ul class="useful-links">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="portefeuille.js"></script>
 </body>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</html>

@@ -1,95 +1,157 @@
-/* Police d'écriture */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-*{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 320;
-    font-style: normal;
-    font-family: "DM Sans", sans-serif;
-}
-/* Header */
-
-body {
-    padding: 0;
+/* Réinitialisation des styles par défaut */
+* {
+    box-sizing: border-box;
     margin: 0;
-    height: 100vh;
-    width: 100%;
-    margin: 0 auto;
+    padding: 0;
 }
-section.top-page {
-    padding: 25px;
+
+/* Styles de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
+
+/* Header */
 header {
-    display: flex;
-    align-items: center;
-}    
-header img {
-    width:60px;
- }
-
-/* Hamburger Menu */
-.ham-menu{
-    display: flex;
+    background: linear-gradient(to right, #2d3b87, #5a6bb7);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
-.ham-btn{
-    background-color: #2d3b87;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.account-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    border: none;
-    margin-right: 15px;
-}
-div button i{
-    color: white;
-    display: block;
-    padding: 5px;
-}
-.ham-btn:hover{
-    background-color: #051285;
-}
-
-/* Menu de Navigation */
-nav.top-menu {
-    display: flex;
-    width: 100%;
-    list-style: none;
-}
-nav {
-    align-items: center;
     background-color: #2d3b87;
-    border-radius: 10px;
-    align-items: center;
-
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
-header nav li {
-    display: inline-flex;
+
+.account-link:hover {
+    background-color: #1d2655;
+}
+
+.account-link i {
+    margin-right: 5px;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
 }
-nav a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: 5px;
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
 }
-.normal:hover {
-    background-color: #051285;
-    transition-duration: 0.15s;
+
+h2 {
+    color: #2d3b87;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#current-balance {
+    font-size: 48px;
+    font-weight: bold;
+    color: #4cd44c;
+    margin-bottom: 20px;
+}
+
+#edit-bank-info-btn {
+    padding: 15px 30px;
+    border: none;
     border-radius: 5px;
-}
-.active {
-    display: block;
-    background-color: #051285;
-    border-radius: 5px;
-}
-.acc-btn {
-    display: block;
-    margin-left: 0px;
-    padding: 0px 0x;
-}
-.acc-btn:hover{
     background-color: #2d3b87;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-li i {
+
+#edit-bank-info-btn:hover {
+    background-color: #1d2655;
+}
+
+/* Transaction History */
+
+#transaction-history {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+#transaction-history h2 {
+    color: #2d3b87;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#transactions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction:hover {
+    background-color: #f9f9f9;
+}
+
+.transaction-type {
+    font-weight: bold;
     margin-right: 10px;
-    margin-left: 10px;
+    color: #666;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    color: #333;
+}
+
+.transaction-details {
+    color: #999;
+}
+
+.received .transaction-amount {
+    color: #4cd44c;
+}
+
+.spent .transaction-amount {
+    color: #ff6666;
 }
