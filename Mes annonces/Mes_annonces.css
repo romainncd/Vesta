@@ -1,0 +1,196 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #1976d2;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titre {
+    font-size: 24px;
+}
+
+#creer-annonce {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#creer-annonce:hover {
+    background-color: #1976d2;
+}
+
+.annonces-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.annonce {
+    width: 30%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.annonce:hover {
+    transform: translateY(-5px);
+}
+
+.annonce img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 50%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.popup-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup-content form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.popup-content form input[type="text"],
+.popup-content form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup-content form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content form button[type="submit"]:hover {
+    background-color: #1976d2;
+}
+
+#image-preview {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .annonce {
+        width: 45%;
+    }
+
+    .popup-content {
+        width: 80%;
+    }
+}
+
+/* ... Autres styles ... */
+
+/* Style des vignettes de couleurs */
+.vignette {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.vignette.verte {
+    background-color: #4caf50; /* Vert */
+}
+
+.vignette.bleue {
+    background-color: #2196f3; /* Bleu */
+}
+
+.vignette.rouge {
+    background-color: #f44336; /* Rouge */
+}
+
+/* Personnalisation du sélecteur de fichier */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-input {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-file-input:hover {
+    background-color: #1976d2;
+}
+
+.custom-file-input::before {
+    content: '';
+}
+

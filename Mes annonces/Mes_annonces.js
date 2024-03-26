@@ -1,6 +1,20 @@
 // Simuler des données d'annonce
 let annoncesData = [];
 
+// Fonction pour gérer le clic sur une annonce
+function handleAnnonceClick(annonce) {
+    // Encodage des valeurs des paramètres de l'URL
+    const titreEncoded = encodeURIComponent(annonce.titre);
+    const prixEncoded = encodeURIComponent(annonce.prix);
+    const imageEncoded = encodeURIComponent(annonce.image);
+
+    // Construction de l'URL avec les paramètres
+    const url = `details_annonce.html?titre=${titreEncoded}&prix=${prixEncoded}&image=${imageEncoded}`;
+
+    // Redirection vers la page details_annonce.html
+    window.location.href = url;
+}
+
 // Fonction pour générer les annonces dynamiquement
 function genererAnnonces() {
     const container = document.getElementById('annonces-container');
@@ -9,27 +23,30 @@ function genererAnnonces() {
     annoncesData.forEach(annonce => {
         const div = document.createElement('div');
         div.classList.add('annonce', annonce.etat);
-        
+
+        // Ajout d'un gestionnaire d'événements au clic sur l'annonce
+        div.addEventListener('click', () => handleAnnonceClick(annonce));
+
         const img = document.createElement('img');
         img.src = annonce.image;
         div.appendChild(img);
 
         const vignette = document.createElement('div');
-        vignette.classList.add('vignette');
+        vignette.classList.add('vignette', annonce.etat);
         div.appendChild(vignette);
-        
+
         const annonceInfo = document.createElement('div');
         annonceInfo.classList.add('annonce-info');
         div.appendChild(annonceInfo);
-        
+
         const titre = document.createElement('h2');
         titre.textContent = annonce.titre;
         annonceInfo.appendChild(titre);
-        
+
         const prix = document.createElement('p');
         prix.textContent = 'Prix : ' + annonce.prix;
         annonceInfo.appendChild(prix);
-        
+
         if (annonce.etat === 'repondu') {
             const personneRepondue = document.createElement('p');
             personneRepondue.textContent = 'Répondu par : ' + annonce.personneRepondue;
@@ -43,10 +60,13 @@ function genererAnnonces() {
             });
             annonceInfo.appendChild(utilisateursListe);
         }
-        
+
         container.appendChild(div);
     });
 }
+
+// Appel de la fonction pour générer les annonces au chargement de la page
+genererAnnonces();
 
 // Fonction pour afficher le popup
 function afficherPopup() {
@@ -113,6 +133,3 @@ function ajouterAnnonce(annonce) {
     annoncesData.push(annonce);
     genererAnnonces();
 }
-
-// Appel de la fonction pour générer les annonces au chargement de la page
-genererAnnonces();
