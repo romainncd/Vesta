@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Emploi du Temps Hebdomadaire</title>
+    <link rel="stylesheet" href="emploi.css">
+</head>
+<body>
+
+<div class="emploi-du-temps-container">
+    <table class="emploi-du-temps">
+        <thead>
+            <tr>
+                <th>Heure / Jour</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+                <th>samedi</th>
+                <th>dimanche </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>6h-7h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <!-- Répétez la structure ci-dessus pour chaque heure de la journée -->
+           
+            <tr>
+                <td>7h-8h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>8h-9h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>9h-10h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>10h-11h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>11h-12h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>12h-13h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>13h-14h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>14h-15h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>15h-16h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>16h-17h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>17h-18h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>18h-19h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>19h-20h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>20h-21h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>21h-22h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>22h-23h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>23h-00h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+          
+
+        </tbody>
+    </table>
+    <div class="nav-container">
+        <button class="nav-btn" id="prevWeek">&#9664; Précédent</button>
+        <button class="nav-btn" id="nextWeek">Suivant &#9654;</button>
+    </div>
+    <div class="form-container">
+        <h2>Ajouter un événement</h2>
+        <form id="ajouterEvenementForm">
+            <input type="text" id="nomEvenement" placeholder="Nom de l'événement" required>
+            <select id="jourEvenement">
+                <option value="1">Lundi</option>
+                <option value="2">Mardi</option>
+                <option value="3">Mercredi</option>
+                <option value="4">Jeudi</option>
+                <option value="5">Vendredi</option>
+                <option value="5">Samedi</option>
+                <option value="5">Dimanche</option>
+            </select>
+            <select id="heureEvenement">
+                <option value="8">6h-7h</option>
+                <option value="8">7h-8h</option>
+                <option value="8">8h-9h</option>
+                <option value="9">10h-11h</option>
+                <option value="9">11h-12h</option>
+                <option value="9">12h-13h</option>
+                <option value="9">13h-14h</option>
+                <option value="9">14h-15h</option>
+                <option value="9">15h-16h</option>
+                <option value="9">16h-17h</option>
+                <option value="9">17h-18h</option>
+                <option value="9">18h-19h</option>
+                <option value="9">19h-20h</option>
+                <option value="9">20h-21h</option>
+                <option value="9">21h-22h</option>
+                <option value="9">22h-23h</option>
+                <option value="9">23h-00h</option>
+
+                <!-- Ajoutez plus d'options selon les plages horaires disponibles -->
+            </select>
+            <button type="button" id="ajouterEvenementBtn">Ajouter l'événement</button>
+        </form>
+    </div>
+    
+</div>
+<script src="emploi.js"></script>
+   
+</body>
+</html>
