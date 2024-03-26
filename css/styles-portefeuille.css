@@ -14,6 +14,28 @@ body {
 }
 
 /* Header */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.home-btn {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #2d3b87;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #1d2655;
+}
+
+.home-btn i {
+    margin-right: 5px;
+}
 header {
     background: linear-gradient(to right, #2d3b87, #5a6bb7);
     color: #ffffff;
