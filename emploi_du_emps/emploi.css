@@ -108,5 +108,59 @@ body {
     outline: 2px solid #2d3b87; /* Mise en évidence pour l'accessibilité */
     outline-offset: 2px;
 }
+/* Style pour les cellules contenant un événement */
+.event-cell {
+    position: relative;
+    transition: transform 0.3s ease; /* Animation douce pour la transformation */
+    cursor: pointer; /* Indiquer que l'élément est interactif */
+}
+
+/* Effet au survol des cellules d'événement */
+.event-cell:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille */
+    z-index: 1; /* S'assurer que la cellule survolée est au-dessus des autres */
+    background-color: #f0f0f0; /* Optionnel : changer légèrement la couleur de fond au survol */
+}
+/* Style initial pour les cellules d'événement */
+.event-cell {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transition fluide pour plusieurs propriétés */
+    cursor: pointer; /* Change le curseur pour indiquer l'interactivité */
+    border-radius: 5px; /* Bords arrondis pour un look plus doux */
+}
+
+/* Animation au survol */
+.event-cell:hover {
+    transform: scale(1.03); /* Légère augmentation de taille */
+    background-color: #3658a7; /* Changement de couleur de fond plus foncée */
+    color: #ffffff; /* Changement de couleur de texte pour améliorer le contraste */
+    z-index: 2; /* Assure que l'élément survolé est au-dessus des autres */
+}
+
+/* Optionnel: Ajout d'un effet de 'shadow' pour augmenter le contraste au survol */
+.event-cell:hover::after {
+    content: '';
+    position: absolute;
+    top: -5px; right: -5px; bottom: -5px; left: -5px; /* Légère extension pour l'ombre */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+/* Style pour le bouton de menu dans chaque cellule d'événement */
+.menu-points {
+    border: none;
+    background-color: transparent;
+    color: inherit; /* Prend la couleur de texte de la cellule parent */
+    cursor: pointer;
+    font-size: 1em; /* Ajustez la taille selon vos besoins */
+    padding: 0;
+    margin-left: 5px; /* Espace entre le nom de l'événement et le bouton */
+}
+
+/* Style pour le bouton au survol pour indiquer l'interactivité */
+.menu-points:hover {
+    color: #3658a7; /* Changement de couleur pour indiquer l'interactivité */
+}
 
 

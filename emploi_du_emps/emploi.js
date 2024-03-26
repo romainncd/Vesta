@@ -25,3 +25,19 @@ document.getElementById('ajouterEvenementBtn').addEventListener('click', functio
         }
     });
 });
+document.getElementById('ajouterEvenementBtn').addEventListener('click', function() {
+    const nomEvenement = document.getElementById('nomEvenement').value;
+    const jourEvenement = parseInt(document.getElementById('jourEvenement').value);
+    const plageHoraire = document.getElementById('heureEvenement').selectedOptions[0].text;
+
+    const emploiDuTemps = document.querySelector('.emploi-du-temps tbody');
+    const lignes = emploiDuTemps.querySelectorAll('tr');
+
+    lignes.forEach(ligne => {
+        if (ligne.firstChild.textContent === plageHoraire) {
+            const cellule = ligne.cells[jourEvenement];
+            cellule.innerHTML = `${nomEvenement} <button class="menu-points">...</button>`; // Ajoutez le bouton ici
+            cellule.classList.add('event-cell');
+        }
+    });
+});
