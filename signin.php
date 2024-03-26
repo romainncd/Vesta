@@ -1,13 +1,6 @@
-CREATE DATABASE mon_site_web;
-USE mon_site_web;
-CREATE TABLE utilisateurs (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nom_utilisateur VARCHAR(50) NOT NULL,
-  email VARCHAR(100) NOT NULL UNIQUE,
-  mot_de_passe VARCHAR(255) NOT NULL,
-  date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 $servername = "localhost"; // ou l'adresse de votre serveur MySQL
 $username = "votre_nom_d_utilisateur"; // votre nom d'utilisateur pour MySQL
 $password = "votre_mot_de_passe"; // votre mot de passe pour MySQL
@@ -44,31 +37,3 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 ?>
-<?php
-include 'db.php'; // Incluez la connexion à la base de données
-
-$nom_utilisateur = $_POST['nom_utilisateur'];
-$mot_de_passe = $_POST['mot_de_passe'];
-
-// Préparez la requête SQL pour éviter les injections SQL
-$stmt = $conn->prepare("SELECT mot_de_passe FROM utilisateurs WHERE nom_utilisateur = ?");
-$stmt->bind_param("s", $nom_utilisateur);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    if (password_verify($mot_de_passe, $row['mot_de_passe'])) {
-        echo "Connexion réussie";
-        
-    } else {
-        echo "Mot de passe incorrect";
-    }
-} else {
-    echo "Nom d'utilisateur non trouvé";
-}
-
-$stmt->close();
-$conn->close();
-?>
-
