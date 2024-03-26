@@ -35,5 +35,21 @@
     <p>Déjà membre ? <a href="login.html">Se connecter</a></p>
   </div>
   <script src="Java\signin.js"></script>
+  <form action="signin.php" method="post">
+    <!-- Vos champs de formulaire ici -->
+  </form>
+  <form action="signup.php" method="post">
+    <div class="input-container">
+      <input type="text" name="nom_utilisateur" placeholder="Nom d'utilisateur" required>
+    </div>
+    <div class="input-container">
+      <input type="email" name="email" placeholder="Adresse e-mail" required>
+    </div>
+    <div class="input-container">
+      <input type="password" name="mot_de_passe" id="password" placeholder="Mot de passe" required>
+    </div>
+    <button type="submit">S'inscrire</button>
+  </form>
+  
 </body>
 </html>

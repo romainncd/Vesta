@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5; /* Couleur de fond générale pour la page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 80vw; /* Ajustement pour réduire la taille globale de l'emploi du temps */
+    max-height: 80vh; /* Ajustement pour limiter la hauteur et éviter le défilement */
+    overflow: auto; /* Permettre le défilement à l'intérieur de l'emploi du temps si nécessaire */
+    background-color: #ffffff; /* Fond blanc pour le contenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour ajouter de la profondeur */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 20px; /* Espace interne pour ne pas coller au bord */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emploi-du-temps-container {
+    width: 100%; /* Utiliser toute la largeur disponible dans le conteneur principal */
+    margin-bottom: 20px; /* Espace avant les boutons */
+}
+
+.emploi-du-temps {
+    border-collapse: collapse;
+    width: 100%; /* Ajustement pour occuper l'espace disponible */
+    background-color: #ffffff; /* Fond blanc pour le tableau */
+}
+
+.emploi-du-temps th, .emploi-du-temps td {
+    border: 1px solid #ddd; /* Bordures plus subtiles */
+    text-align: center;
+    padding: 10px; /* Padding réduit pour une apparence plus compacte */
+    color: #333; /* Couleur de texte standard */
+}
+
+.emploi-du-temps th {
+    background-color: #2d3b87; /* Couleur d'arrière-plan spécifiée pour les en-têtes */
+    color: white; /* Texte blanc pour les en-têtes */
+}
+
+.nav-container, .form-container {
+    width: 100%; /* Alignement avec l'emploi du temps */
+    display: flex;
+    justify-content: center; /* Centrer les boutons et le formulaire */
+    gap: 10px; /* Espacement entre les éléments */
+    margin: 10px 0; /* Marge supérieure et inférieure */
+}
+
+.nav-btn, #ajouterEvenementBtn {
+    background-color: #2d3b87; /* Harmonisation avec le thème de l'emploi du temps */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bords arrondis pour les boutons */
+    cursor: pointer; /* Indicateur de clic */
+}
+
+.nav-btn:hover, #ajouterEvenementBtn:hover {
+    background-color: #1c255b; /* Assombrissement au survol */
+}
+.form-container {
+    background-color: #ffffff; /* Fond blanc pour le contraste */
+    padding: 20px; /* Padding interne pour l'espacement */
+    border-radius: 8px; /* Bords arrondis pour la douceur */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
+    margin: 20px 0; /* Marges pour séparer du tableau et des boutons */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les éléments du formulaire */
+    max-width: 500px; /* Limite la largeur pour une apparence plus structurée */
+    width: 100%; /* Adapte la largeur au conteneur parent */
+}
+
+.form-container h2 {
+    color: #2d3b87; /* Couleur pour l'harmonisation avec le thème */
+    margin-bottom: 15px; /* Espacement avant les champs du formulaire */
+}
+
+.form-container input, .form-container select, .form-container button {
+    padding: 10px; /* Confort de saisie */
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 5px; /* Adoucissement des angles */
+    width: calc(100% - 22px); /* Ajustement de la largeur pour tenir compte du padding et de la bordure */
+}
+
+.form-container button {
+    background-color: #2d3b87; /* Couleur de fond pour le bouton */
+    color: white; /* Texte blanc pour le contraste */
+    font-weight: bold; /* Mise en évidence du texte */
+    cursor: pointer; /* Indicateur de pointeur */
+    border: none; /* Retrait de la bordure */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+.form-container button:hover {
+    background-color: #1c255b; /* Assombrissement au survol pour l'interaction */
+}
+
+/* Stylisation additionnelle pour améliorer l'accessibilité visuelle des éléments interactifs */
+.form-container input:focus, .form-container select:focus, .form-container button:focus {
+    outline: 2px solid #2d3b87; /* Mise en évidence pour l'accessibilité */
+    outline-offset: 2px;
+}
+
+
