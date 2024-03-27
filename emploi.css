@@ -162,5 +162,135 @@ body {
 .menu-points:hover {
     color: #3658a7; /* Changement de couleur pour indiquer l'interactivité */
 }
+/* le top de la page */
+/* Style pour le bandeau en haut de la page */
+.top-page {
+    width: 100%;
+    background-color: #2d3b87; /* Bleu spécifié */
+    color: white; /* Texte en blanc pour contraster avec le fond bleu */
+    padding: 0px 0px; /* Espacement interne */
+}
+
+.top-page header {
+    display: flex;
+    align-items: center; /* Centrer les éléments verticalement */
+    justify-content: space-between; /* Espacer les éléments à gauche et à droite */
+}
+
+.top-menu li {
+    display: inline-block; /* Afficher les éléments de navigation en ligne */
+    margin-right: 20px; /* Espacement entre les éléments de navigation */
+}
+
+.top-menu li a {
+    color: white; /* Couleur du texte pour les liens */
+    text-decoration: none; /* Pas de soulignement pour les liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+.top-menu li a:hover {
+    text-decoration: underline; /* Souligner au survol pour indiquer l'interactivité */
+}
+
+/* Réinitialisation des styles par défaut */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.home-btn {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #2d3b87;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #1d2655;
+}
+
+.home-btn i {
+    margin-right: 5px;
+}
+header {
+    background: linear-gradient(to right, #2d3b87, #5a6bb7);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+header {
+    width: 100vw; /* S'assurer que l'en-tête occupe toute la largeur de la fenêtre */
+    background-color: #2d3b87; /* Votre couleur de fond */
+    color: white; /* Couleur de texte */
+    padding: 10px 20px; /* Ajustez le padding selon vos besoins */
+}
 
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.account-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #2d3b87;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.account-link:hover {
+    background-color: #1d2655;
+}
+
+.account-link i {
+    margin-right: 5px;
+}
+.emploi-du-temps-container {
+    margin-top: 20px; /* Ajustez la valeur selon l'espacement souhaité */
+}
+header {
+    width: 100%;
+    background-color: #2d3b87; /* Votre couleur préférée pour le bandeau */
+    color: white;
+    padding: 20px 0; /* Contrôle la hauteur du bandeau avec le padding vertical */
+    text-align: center; /* Centre le texte ou les éléments à l'intérieur */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* S'assurer que le conteneur s'étend sur toute la largeur */
+    padding: 0 20px; /* Ajouter du padding horizontal si nécessaire */
+}
+header {
+    border: none; /* Supprimez toute bordure */
+    /* Les autres propriétés restent inchangées */
+}
