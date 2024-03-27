@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Moderne</title>
+    <link rel="stylesheet" href="css\chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-links">
+            <button class="nav-button"><i class="fas fa-home"></i> Accueil</button> <!-- Icône d'accueil -->
+            <button class="nav-button"><i class="fas fa-user"></i> Compte</button> <!-- Icône de compte -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Contacts</h2>
+            <ul id="contact-list">
+                <li class="contact" onclick="loadMessages('John')">John</li>
+                <li class="contact" onclick="loadMessages('Jane')">Jane</li>
+                <li class="contact" onclick="loadMessages('Doe')">Doe</li>
+            </ul>
+        </div>
+        <div class="chat">
+            <div class="chat-header">
+                <h2 id="current-contact">Nom du contact</h2>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="chat-input">
+                <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                <button id="send-button" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
