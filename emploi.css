@@ -290,7 +290,3 @@ header {
     width: 100%; /* S'assurer que le conteneur s'étend sur toute la largeur */
     padding: 0 20px; /* Ajouter du padding horizontal si nécessaire */
 }
-header {
-    border: none; /* Supprimez toute bordure */
-    /* Les autres propriétés restent inchangées */
-}
