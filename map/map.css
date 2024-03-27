@@ -1,0 +1,57 @@
+#map {
+    height: 400px;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+#map {
+    height: 400px;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.search-input {
+    margin: 2px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: calc(33% - 8px); /* Ajustement pour que les trois champs tiennent sur la même ligne */
+}
+
+/* Assurez-vous que le reste de votre CSS est adapté pour un affichage cohérent */
+
